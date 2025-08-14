@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 // Enhanced CORS configuration
 const allowedOrigins = [
-  "https://www.henna-burgund.shop",
+  "https://nfhat-f.vercel.app",
   "http://localhost:5173"
 ];
 
