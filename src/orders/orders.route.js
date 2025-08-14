@@ -12,7 +12,7 @@ const THAWANI_API_URL = process.env.THAWANI_API_URL;
 const publish_key = "dSUzzUhfbpjumRIkHPDelGGPNwmp50";
 
 const app = express();
-app.use(cors({ origin: "https://www.henna-burgund.shop" }));
+app.use(cors({ origin: "https://nfhat-f.vercel.app" }));
 app.use(express.json());
 
 // Create checkout session
@@ -49,8 +49,8 @@ router.post("/create-checkout-session", async (req, res) => {
             client_reference_id: nowId,
             mode: "payment",
             products: lineItems,
-            success_url: "https://www.henna-burgund.shop/SuccessRedirect?client_reference_id=" + nowId,
-            cancel_url: "https://www.henna-burgund.shop/cancel",
+            success_url: "https://nfhat-f.vercel.app/SuccessRedirect?client_reference_id=" + nowId,
+            cancel_url: "https://nfhat-f.vercel.app/cancel",
             metadata: {
                 customer_name: customerName,
                 customer_phone: customerPhone,
