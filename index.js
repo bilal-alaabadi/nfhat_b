@@ -6,7 +6,7 @@ const path = require("path");
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const port = 5004;
+const port = 5000;
 
 // Remove bodyParser (redundant with express.json())
 app.use(express.json({ limit: "25mb" }));  // Handles JSON payloads
@@ -16,7 +16,7 @@ app.use(cookieParser());
 // Enhanced CORS configuration
 const allowedOrigins = [
   "https://www.henna-burgund.shop",
-  "https://henna-burgund.shop"
+  "http://localhost:5173"
 ];
 
 app.use(cors({
